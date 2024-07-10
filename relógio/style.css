@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+*
+ {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald';
+ }
+
+ body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 100vh; 
+    background: linear-gradient(30deg, rgb(53, 29, 99), rgb(1, 5, 0));
+    gap: 20vw;
+    
+}
+
+ .relogio {
+    margin-left: 9vw;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid rgb(40, 34, 54);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .numero {
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 10px;
+    font-size: 21px;
+ }
+
+
+
+ .numero b {
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+    
+ }
+
+ .circulo_pont {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+ }
+
+.pont_hrs {
+
+    width: 10px;
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+.pont_hrs, .pont_segundos, .pont_minutos {
+    --rotate: 0;
+    left: 50%;
+    bottom: 50%;
+    position: absolute;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+    transform-origin: bottom;
+}
+
+.pont_segundos {
+    width: 3px;
+    height: 120px;
+    background-color: rgb(138, 0, 0);
+    border-radius: 8px;
+}
+
+.pont_minutos {
+    width: 6.8px;
+    height: 120px;
+    background-color: rgb(77, 77, 77);
+    border-radius: 8px;
+}
+
+
+/* Relógio digital */
+
+
+.relogio_digital {
+
+    display: flex;
+    gap: 70px;
+    height: 40vh;
+    background-color: rgb(37, 18, 68);
+    padding: 40px;
+    width: 42vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+
+    
+}
+
+.relogio_digital:hover {
+    
+}
+.relogio_digital div {
+    background: black;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.relogio_digital span {
+    font-size: 13vh;
+    font-weight: 700;
+    color: rgb(173, 173, 173);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.relogio_digital span:not(:last-child)::after {
+    content: ":";
+    margin-bottom: 16px;
+    color: rgb(112, 112, 112);
+    z-index: 111;
+  
+}
+
+
+
+
+
+
+
